@@ -1,0 +1,21 @@
+header {
+  background-image: url("../images/batthern.png");
+  background-color: orange;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* header div img {
+  display: block;
+  margin: 0 auto;
+} */
+
+header h2 {
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  /* margin: 0; */
+}
