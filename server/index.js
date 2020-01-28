@@ -36,11 +36,12 @@ app.listen(PORT, () => {
   browserSync({
     open: false,
     proxy: 'http://localhost:' + PORT,
-    files: ["/public/**/*.*"],
-    // server: true,
+    files: ["public/**/*.*"],
+    injectChanges: true,
     watchOptions: {
       usePolling: true
-    }
+    },
+    notify: true
   });
   console.log("Example app listening on port " + PORT);
 });
