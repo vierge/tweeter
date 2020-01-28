@@ -7,6 +7,9 @@ const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
 
+// browser-sync and morgan stuff: this is MARA CUSTOM
+const browserSync   = require('browser-sync');
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
@@ -30,5 +33,9 @@ const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 app.use("/tweets", tweetsRoutes);
 
 app.listen(PORT, () => {
+  browserSync({
+    proxy: 'localhost:' + PORT,
+    files: ["../public"]
+  });
   console.log("Example app listening on port " + PORT);
 });
