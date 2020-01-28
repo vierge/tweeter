@@ -1,0 +1,65 @@
+.new-tweet {
+  text-align: center;
+  background-color: #ddd;
+
+}
+.new-tweet h2 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+  background-color: #f4f1ec;
+}
+
+.bleedContainer {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0.5em 0;
+  height: 145px;
+}
+
+.new-tweet textarea {
+  /* normalize */
+  border-style: none;
+  overflow: hidden;
+  outline: none;
+  resize: none;
+  
+  /* placement */
+  display: block;
+  width: 100%;
+  background-color: inherit;
+  height: 2.2em;
+  margin: 10px auto;
+
+  /* styling */
+  border-bottom: 6px solid #444;
+  line-height: 2em;
+  padding: 0em;
+  padding-bottom: 0;
+  margin-bottom: 15px;
+
+  /* font */
+  font-weight: 600;
+}
+
+.new-tweet input {
+  font-family: 'Bungee', cursive;
+  font-size: 0.9em;
+  padding: 0.2rem 0.6rem;
+  background-color: #4056a1;
+  color: white;
+  float: left;
+  border: none;
+  
+}
+
+.new-tweet input:active {
+  background-color: black;
+}
+
+.new-tweet .counter {
+  font-family: 'Bungee', cursive;
+  float: right;
+  padding: 0.2rem;
+}
