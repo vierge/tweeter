@@ -70,8 +70,12 @@ const createTweetElement = (tweetData) => {
   const {user, content, created_at} = tweetData;
   const date = new Date(created_at);
   const postDate = `${date.toUTCString()}:`;
-
   const $tweet = $('<article>').addClass('tweet');
+  safetext = escape(content.text);
+
+  // if (content['text'].includes('<script>')) {
+  //   content.text = `${escape(content.text)}`;
+  // }
 
   const markup = `
       <header>
@@ -82,7 +86,7 @@ const createTweetElement = (tweetData) => {
         <p class="userAddress">${user.handle}</p>
       </header>
       <div class="content">
-        <p>${content.text}</p>
+        <p>${content.text.includes('<script>') ? safetext : content.text}</p>
       </div>
       <footer>
         <p class="date">
@@ -99,7 +103,7 @@ const createTweetElement = (tweetData) => {
 }
 
 const renderTweets = (tweets) => {
-  const container = $('#feed').html('');
+  const container = $('#feed').text('');
   // console.log(container);
   tweets.forEach(tweet => {
     container.prepend((createTweetElement(tweet)));
@@ -108,5 +112,9 @@ const renderTweets = (tweets) => {
 }
 
 
-
+const escape = (string) => {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(string));
+  return div.innerHTML;
+}
 
