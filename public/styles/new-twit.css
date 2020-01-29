@@ -1,22 +1,25 @@
-.new-tweet {
-  text-align: center;
-  background-color: #ddd;
-
-}
-.new-tweet h2 {
-  margin-top: 10px;
-  margin-bottom: 0px;
-  padding-bottom: 5px;
-  background-color: #f4f1ec;
-}
-
 .bleedContainer {
   display: block;
   width: 90%;
   margin: 0 auto;
   padding: 0.5em 0;
-  height: 145px;
+  /* height: 145px; */
 }
+
+.new-tweet {
+  display: block;
+  overflow: auto;
+  text-align: center;
+  background-color: inherit;
+  height: 100%;
+  margin-bottom: 2em;
+}
+  /* h2 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+  background-color: #f4f1ec;
+} */
 
 .new-tweet textarea {
   /* normalize */

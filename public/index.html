@@ -1,76 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
+
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
 
-    <!-- External CSS (mara's note: this is the base normalizer...)-->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <!-- External CSS (mara's note: this is the base normalizer...)-->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,600&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,600&display=swap" rel="stylesheet">
 
-    <!-- CSS RULES FOR GOOGLE FONTS: COPY 2 LAYOUT.CSS LATER
+  <!-- CSS RULES FOR GOOGLE FONTS: COPY 2 LAYOUT.CSS LATER
     font-family: 'Source Sans Pro', sans-serif;
     font-family: 'Bungee', cursive;
      -->
 
-    <!-- App CSS (mara's note: that is overridden by our styles!)-->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- App CSS (mara's note: that is overridden by our styles!)-->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <!-- navbar CSS -->
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <!-- navbar CSS -->
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <!-- header CSS -->
-    <link rel="stylesheet" href="/styles/header.css" type= "text/css" />
+  <!-- header CSS -->
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-    <!-- new tweet CSS -->
-    <link rel="stylesheet" href="/styles/new-twit.css" type= "text/css" />
+  <!-- new tweet CSS -->
+  <link rel="stylesheet" href="/styles/new-twit.css" type="text/css" />
 
-    <!-- External JS (mara's note: the jQuery library) -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  <!-- existing twit CSS -->
+  <link rel="stylesheet" href="/styles/twit.css" type="text/css" />
 
-    <!-- ICONIFY: this will come in handy -->
-    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+  <!-- External JS (mara's note: the jQuery library) -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-    <!-- App JS (mara's note: our client!) -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+  <!-- ICONIFY: this will come in handy -->
+  <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
 
-    <!-- App JS (mara's note: jQuery experiment!) -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  </head>
+  <!-- App JS (mara's note: our client!) -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-      <div>
-        <p><strong>Write</strong> A New Tweet</p>
-        <span class="iconify" data-icon="mdi-chevron-double-down" data-inline="false"></span>
-      </div>
-    </nav>
-    <header>
-      <div>
-        <img src="/images/profile-hex.png" alt="">
-      </div>
-      <br>
-      <div>
-        <h2>Mara Gray</h2>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
+  <!-- App JS (mara's note: jQuery experiment!) -->
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+</head>
+
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <span>tweeter</span>
+    <div>
+      <p><strong>Write</strong> A New Tweet</p>
+      <span class="iconify" data-icon="mdi-chevron-double-down" data-inline="false"></span>
+    </div>
+  </nav>
+  <header>
+    <div>
+      <img src="/images/profile-hex.png" alt="">
+    </div>
+    <br>
+    <div>
+      <h2>Mara Gray</h2>
+    </div>
+  </header>
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <div class="bleedContainer">
+      <!-- <h2>Compose Tweet</h2> -->
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <div class="bleedContainer">
-          <form action="/tweets/" method="POST">
-            <textarea name="text" placeholder="What are you humming about?"></textarea>
-            <input type="submit" value="Tweet">
-            <span class="counter">140</span>
-          </form>
+        <form action="/tweets/" method="POST">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
+      <section class="feed">
+        <div class="tweet">
+          <header>
+            <div class="userInfo">
+              <img src="#" alt="#" class="avatar" />
+              <p class="username">effective shitposter</p>
+            </div>
+            <p class="userAddress">@dril.or.whatever</p>
+          </header>
+          <article>
+            <p>amazing, day ruining shitpost</p>
+          </article>
+          <footer>
+            <p class="date">
+              right now 20XX
+            </p>
+            <div class="options">
+              <a href="#flag">flag</a>
+              <a href="#rt">rt</a>
+              <a href="#like">like</a>
+            </div>
+          </footer>
         </div>
-      </section>      
-    </main>
-  </body>
+      </section>
+    </div>
+  </main>
+</body>
+
 </html>
