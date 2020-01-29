@@ -7,6 +7,12 @@
   border: 5px solid gray;
 }
 
+.tweet:hover {
+  box-shadow: #ccc 5px 5px;
+  /* font-weight: ;  // it looks weird rn */ 
+}
+
+
 .tweet header {
   background-color: inherit;
   background-image: none;
@@ -28,9 +34,14 @@
 .userAddress {
   color: #ccc;
   padding-right: 1em;
+  opacity: 0;
 }
 
-.tweet article {
+.tweet:hover .userAddress {
+  opacity: 1;
+}
+
+.tweet .content {
   width: 90%;
   margin: 0 auto;
 }
