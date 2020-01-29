@@ -33,8 +33,8 @@
 // ]
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadTweets();
   tweetDaemon();
+  loadTweets();
   });
 
 loadTweets = () => {
@@ -60,9 +60,7 @@ const tweetDaemon = () => {
         data: $data,               // the data to send
         dataType: JSON,     // the data type to expect in response
       })
-      .done(function(data) {
-        console.log(data);
-      })
+      .done(loadTweets());
     }
   })
 }
