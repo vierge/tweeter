@@ -24,11 +24,19 @@
 }
 
 .userInfo {
-  width: 33%;
+  width: 66%;
+  /* padding: 0 1em; */
+  /* max-width: 256px; */
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: left;
+}
+
+.userInfo img  {
+  text-align: center;
+  width: 100px;
+  padding: 0 1em;
 }
 
 .userAddress {
