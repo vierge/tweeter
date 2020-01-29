@@ -4,11 +4,11 @@
   overflow: auto;
   height: 100%;
   margin: 1em 0;
-  border: 5px solid gray;
+  border: 5px solid #444;
 }
 
 .tweet:hover {
-  box-shadow: #ccc 5px 5px;
+  box-shadow: #777 5px 5px;
   /* font-weight: ;  // it looks weird rn */ 
 }
 
@@ -23,7 +23,7 @@
   justify-content: space-between;
 }
 
-.userInfo {
+.tweet .userInfo {
   width: 66%;
   /* padding: 0 1em; */
   /* max-width: 256px; */
@@ -33,13 +33,13 @@
   justify-content: left;
 }
 
-.userInfo img  {
+.tweet .userInfo img  {
   text-align: center;
   width: 100px;
   padding: 0 1em;
 }
 
-.userAddress {
+.tweet .userAddress {
   color: #ccc;
   padding-right: 1em;
   opacity: 0;
@@ -65,5 +65,5 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-top: 5px solid gray;
+  border-top: 5px solid #444;
 }
