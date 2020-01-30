@@ -1,4 +1,7 @@
 header {
+  position: sticky;
+  top: -300px;
+  right: 0;
   background-image: url("../images/batthern.png");
   background-color: orange;
   height: 400px;
@@ -14,8 +17,15 @@ header {
   margin: 0 auto;
 } */
 
+header .name {
+  position:sticky;
+  top: 0;
+  /* bottom: -20px; */
+}
+
 header h2 {
   text-align: center;
+  margin: 0.5em 0;
   color: white;
   font-weight: normal;
 } 
