@@ -33,11 +33,11 @@
 // ]
 
 document.addEventListener('DOMContentLoaded', () => {
+  loadTweets();
+  tweetDaemon();
   $('.WRITE').click(function() {
     $('.container').toggleClass('exposed');
   });
-  tweetDaemon();
-  loadTweets();
   });
 
 loadTweets = () => {
@@ -74,7 +74,7 @@ const createTweetElement = (tweetData) => {
   const date = new Date(created_at);
   const postDate = `${date.toUTCString()}:`;
   const $tweet = $('<article>').addClass('tweet');
-  safetext = escape(content.text);
+  const safetext = escape(content.text);
 
   // if (content['text'].includes('<script>')) {
   //   content.text = `${escape(content.text)}`;

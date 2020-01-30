@@ -1,7 +1,7 @@
 .container {
   position: relative;
   top: -6em;
-  transition: top 2s ease;
+  transition: top 0.75s ease;
   z-index: -1;
 }
 
