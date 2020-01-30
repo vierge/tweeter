@@ -33,13 +33,17 @@
 // ]
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadTweets();
+  // load the page scripts
   tweetDaemon();
+  loadTweets();
+
+  // tweet window listener
   $('.WRITE').click(function() {
     $('.container').toggleClass('exposed');
   });
   });
 
+  // invalid tweet listener
 loadTweets = () => {
   $.ajax('/tweets', {
     method: 'GET'
@@ -61,9 +65,14 @@ const tweetDaemon = () => {
         type: 'POST',       // the verb
         url: '/tweets',  // the target address
         data: $data,               // the data to send
-        dataType: JSON,     // the data type to expect in response
+        // dataType: 'text',     // the data type to expect in response
       })
-      .done(loadTweets());
+      .fail((xhr, status, error) => {
+        console.log(xhr)
+        console.log(error)
+        console.log(status)
+      })
+      .done(loadTweets);
     }
   })
 }
