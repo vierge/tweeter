@@ -21,19 +21,31 @@
 
 .new-tweet {
   display: block;
-  overflow: auto;
+  overflow: hidden;
   text-align: center;
   background-color: inherit;
-  height: 5em;
+  height: 100%;
   margin-bottom: 2em;
 }
 
 .error {
-  display: none;
-  height: 100%;
+  opacity: 0;
+  height: auto;
+  max-height: 0;
   overflow: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid #ff0000;
+  padding: 0.25em;
   color: #ff0000;
   justify-content: left;
+  transition: all 0.5s ease;
+}
+
+.error.exposed{
+  max-height: 100px;
+  opacity: 1;
   
 }
 
@@ -46,14 +58,6 @@
 
 .error .iconify {
   min-width: 50px;
-}
-
-.error.exposed {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 3px solid #ff0000;
-  padding: 0.25em;
 }
 
 
@@ -70,12 +74,12 @@
   display: block;
   width: 100%;
   background-color: inherit;
-  height: 2.2em;
+  height: 2.3em;
   margin: 10px auto;
 
   /* styling */
   border-bottom: 6px solid #444;
-  line-height: 2em;
+  line-height: 2.2em;
   padding: 0em;
   padding-bottom: 0;
   margin-bottom: 15px;
