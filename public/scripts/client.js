@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // tweet window listener
   $('.WRITE').click(function() {
     $('.container').toggleClass('exposed');
+    $('.error').removeClass('exposed');
   });
   });
 
@@ -55,10 +56,16 @@ loadTweets = () => {
 
 const tweetDaemon = () => {
   $('#new-tweet form').submit(function(event) {
+    $('.error').removeClass('exposed');
     event.preventDefault();
     const $data = $(this).serialize();
     if ($data.length <= 5 || $data.length > 145) {
-      alert('NOOOOOO DEALLLLLLLL');
+      $('.error').addClass('exposed');
+      $('.error p').text(
+        $data.length <= 5 ? 
+        `There's nothing to post!` :
+          `Your post is too long!`
+      )
     } else {
       // AJAX calls contain an object with the properties of the request.
       $.ajax({
@@ -72,7 +79,11 @@ const tweetDaemon = () => {
         console.log(error)
         console.log(status)
       })
-      .done(loadTweets);
+      .done(() => {
+        $('#new-tweet textarea').val('');
+        $('.counter').text('140');
+        loadTweets();
+      });
     }
   })
 }

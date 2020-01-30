@@ -33,25 +33,36 @@
   height: 100%;
   overflow: auto;
   color: #ff0000;
-  justify-content: space-between;
-  /* border: 3px solid #ff0000; */
+  justify-content: left;
+  
 }
 
 .error p {
   color:black;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.error .iconify {
+  min-width: 50px;
 }
 
 .error.exposed {
-  /* display: flex;
+  display: flex;
   flex-direction: row;
-  align-items: center; */
+  align-items: center;
+  border: 3px solid #ff0000;
+  padding: 0.25em;
 }
+
+
 
 
 .new-tweet textarea {
   /* normalize */
   border-style: none;
-  overflow: hidden;
+  overflow: auto;
   outline: none;
   resize: none;
   
@@ -77,7 +88,7 @@
   font-family: 'Bungee', cursive;
   font-size: 0.9em;
   padding: 0.2rem 0.6rem;
-  background-color: #4056a1;
+  background-color: red;
   color: white;
   float: left;
   border: none;
