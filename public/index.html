@@ -60,21 +60,21 @@
     </div>
     <br>
     <div>
-      <h2>Mara Gray</h2>
+      <h2><strong>Mara</strong> Gray</h2>
     </div>
   </header>
   <!-- Page-specific (main) content here -->
   <main class="container">
     <div class="bleedContainer">
       <!-- <h2>Compose Tweet</h2> -->
+      <div class="error">
+        <span class="iconify" data-icon="bx:bx-error" data-inline="false"></span>
+        <p class="error-message"></p>
+      </div>
       <section class="new-tweet" id="new-tweet">
-        <div class="error">
-          <!-- iconify span goes here -->
-          <!-- error <p> goes here -->
-        </div>
         <form action="/tweets/" method="POST">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
+          <input type="submit" value="Tweet" class="invalid">
           <span class="counter">140</span>
         </form>
       </section>

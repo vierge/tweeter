@@ -26,14 +26,27 @@
   background-color: inherit;
   height: 5em;
   margin-bottom: 2em;
-  
 }
-  /* h2 {
-  margin-top: 10px;
-  margin-bottom: 0px;
-  padding-bottom: 5px;
-  background-color: #f4f1ec;
-} */
+
+.error {
+  display: none;
+  height: 100%;
+  overflow: auto;
+  color: #ff0000;
+  justify-content: space-between;
+  /* border: 3px solid #ff0000; */
+}
+
+.error p {
+  color:black;
+}
+
+.error.exposed {
+  /* display: flex;
+  flex-direction: row;
+  align-items: center; */
+}
+
 
 .new-tweet textarea {
   /* normalize */
@@ -74,6 +87,7 @@
 .new-tweet input:active {
   background-color: black;
 }
+
 
 .new-tweet .counter {
   font-family: 'Bungee', cursive;

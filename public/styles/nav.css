@@ -37,3 +37,12 @@ nav p {
 nav .iconify {
   color: red;
 }
+
+nav .WRITE:hover .iconify {
+  animation: bouncey 0.2s infinite alternate;
+}
+
+@keyframes bouncey {
+  from {transform: translateY(-4px);}
+  to   {transform: translateY(4px);}
+}
