@@ -5,6 +5,7 @@
   z-index: -1;
 }
 
+/* .exposed class exposes the new-tweet element by sliding the whole div down */
 .container.exposed {
   top: 0;
   

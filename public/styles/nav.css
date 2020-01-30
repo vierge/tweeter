@@ -1,25 +1,12 @@
-/* 
-Change the appearance of the nav based on the following rules. The navbar should:
-
-    Be fixed to the top.
-        Tip: add a bunch of empty or placeholder lines or paragraphs to the body so you can see how it behaves when you scroll vertically.
-    Be 120 pixels in height
-    Be the full width of the viewport.
-    Have a z-index that means the nav will always be stacked on top
-    Have #4056A1 as its default background colour.
-    Have #FFFFFF as its default font colour
-    The <span> within the <nav> has Bungee as it's default font-family
-    The inner content should not be touching the viewport edge on any side and should remain 1.5ems away from all edges
-
-*/
-
 nav {
-  position: sticky; /* used to ensure navbar remains in the page flow */
+  position: sticky;             /* used to ensure navbar remains in the page flow */
+  top: 0;
+  left: 0; 
   background-color: #4056a1;
   color: #ffffff;
   height: 120px;
-  width: 100vw; /* using viewport units for responsive stuff later */
-  z-index: 1000; /* brute force approach :p */
+  width: 100vw;                 /* using viewport units for responsive stuff later */
+  z-index: 1000;                /* brute force approach :p */
   display: flex;
   flex-direction: row;
   align-items: center;
