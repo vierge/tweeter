@@ -33,6 +33,9 @@
 // ]
 
 document.addEventListener('DOMContentLoaded', () => {
+  $('.WRITE').click(function() {
+    $('.container').toggleClass('exposed');
+  });
   tweetDaemon();
   loadTweets();
   });
@@ -117,4 +120,5 @@ const escape = (string) => {
   div.appendChild(document.createTextNode(string));
   return div.innerHTML;
 }
+
 
