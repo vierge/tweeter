@@ -31,13 +31,15 @@
 .error {
   opacity: 0;
   height: auto;
+  width: 100%;
+  margin: 0 auto;
   max-height: 0;
   overflow: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   border: 2px solid #ff0000;
-  padding: 0.25em;
+  padding: 0;
   color: #ff0000;
   justify-content: left;
   transition: all 0.5s ease;
@@ -46,6 +48,7 @@
 .error.exposed{
   max-height: 100px;
   opacity: 1;
+  padding: 0.25em;
   
 }
 

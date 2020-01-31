@@ -29,6 +29,10 @@ body {
   z-index: -1000;                              /* init z-index and put the body at the very bottom */
 }
 
+.desktopflex {
+  /* z-index: -1001; */
+}
+
 main {
   width: 90%;
   margin: 0 auto;

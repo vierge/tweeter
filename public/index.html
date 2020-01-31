@@ -32,6 +32,9 @@
   <!-- existing twit CSS -->
   <link rel="stylesheet" href="/styles/twit.css" type="text/css" />
 
+  <!-- Responsive Desktop sheet -->
+  <link rel="stylesheet" href="/styles/desktop.css" type="text/css" />
+
   <!-- External JS (mara's note: the jQuery library) -->
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -54,58 +57,60 @@
       <span class="iconify" data-icon="mdi-chevron-double-down" data-inline="false"></span>
     </div>
   </nav>
-  <header>
-    <div>
-      <img src="/images/profile-hex.png" alt="">
-    </div>
-    <br>
-    <div class="name">
-      <h2><strong>Mara</strong> Gray</h2>
-    </div>
-  </header>
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <div class="bleedContainer">
-      <!-- <h2>Compose Tweet</h2> -->
-      <div class="error">
-        <span class="iconify" data-icon="bx:bx-error" data-inline="false"></span>
-        <p class="error-message">ERROR</p>
+  <div class="desktopFlex">
+    <header class="headpanel">
+      <div>
+        <img src="/images/profile-hex.png" alt="" class="portrait">
       </div>
-      <section class="new-tweet" id="new-tweet">
-        <form action="/tweets/" method="POST">
-          <textarea rows="2" name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet" class="invalid">
-          <span class="counter">140</span>
-        </form>
-      </section>
-      <section class="feed" id="feed">
-      <!-- EXAMPLE TWEET vvvv
-        <article class="tweet">
-          <header>
-            <div class="userInfo">
-              <img src="#" alt="#" class="avatar" />
-              <p class="username">effective shitposter</p>
-            </div>
-            <p class="userAddress">@irony.poisoned</p>
-          </header>
-          <article class="content">
-            <p>i am extremely the queen of post</p>
-          </article>
-          <footer>
-            <p class="date">
-              right now 20XX
-            </p>
-            <div class="options">
-              <a href="#flag">flag</a>
-              <a href="#rt">rt</a>
-              <a href="#like">like</a>
-            </div>
-          </footer>
-        </article> 
-      FOR REFERENCE ONLY ^^^^-->
-      </section>
-    </div>
-  </main>
+      <br>
+      <div class="name">
+        <h2><strong>Mara</strong> Gray</h2>
+      </div>
+    </header>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <div class="bleedContainer">
+        <!-- <h2>Compose Tweet</h2> -->
+        <div class="error">
+          <span class="iconify" data-icon="bx:bx-error" data-inline="false"></span>
+          <p class="error-message">ERROR</p>
+        </div>
+        <section class="new-tweet" id="new-tweet">
+          <form action="/tweets/" method="POST">
+            <textarea rows="2" name="text" placeholder="What are you humming about?"></textarea>
+            <input type="submit" value="Tweet" class="invalid">
+            <span class="counter">140</span>
+          </form>
+        </section>
+        <section class="feed" id="feed">
+        <!-- EXAMPLE TWEET vvvv
+          <article class="tweet">
+            <header>
+              <div class="userInfo">
+                <img src="#" alt="#" class="avatar" />
+                <p class="username">effective shitposter</p>
+              </div>
+              <p class="userAddress">@irony.poisoned</p>
+            </header>
+            <article class="content">
+              <p>i am extremely the queen of post</p>
+            </article>
+            <footer>
+              <p class="date">
+                right now 20XX
+              </p>
+              <div class="options">
+                <a href="#flag">flag</a>
+                <a href="#rt">rt</a>
+                <a href="#like">like</a>
+              </div>
+            </footer>
+          </article> 
+        FOR REFERENCE ONLY ^^^^-->
+        </section>
+      </div>
+    </main>
+  </div>
 </body>
 
 </html>

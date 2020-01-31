@@ -1,8 +1,9 @@
 header {
   position: sticky;
-  top: -300px;
+  top: -320px;
   right: 0;
   background-image: url("../images/batthern.png");
+  background-attachment: fixed;
   background-color: orange;
   height: 400px;
   display: flex;
@@ -12,14 +13,19 @@ header {
   z-index: 100;
 }
 
-/* header div img {
+header .portrait {
   display: block;
   margin: 0 auto;
-} */
+  max-height: 100%;
+  width: 40vw;
+  max-width: 256px;
+  margin-bottom: 60px;
+  
+}
 
 header .name {
-  position:sticky;
-  top: 0;
+  position: absolute;
+  bottom: 0;
   /* bottom: -20px; */
 }
 
