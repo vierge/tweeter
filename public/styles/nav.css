@@ -4,7 +4,7 @@ nav {
   left: 0; 
   background-color: transparent;
   color: #ffffff;
-  height: 100px;
+  height: 80px;
   width: 100vw;                 /* using viewport units for responsive stuff later */
   z-index: 1000;                /* brute force approach :p */
   display: flex;
