@@ -15,10 +15,6 @@ WHAT DO WE WANT FOR DESKTOP:
     height: 100px;
   }
 
-  img {
-    margin-bottom: 60px;
-  }
-
   .desktopFlex {
     position: fixed;
     top: 100px;
