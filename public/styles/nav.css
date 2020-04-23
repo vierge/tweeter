@@ -14,7 +14,9 @@ nav {
 }
 
 nav span {
+  opacity: 0;
   line-height: 100%;
+  margin-top: 0.7em;
   margin-bottom: 0.7em;
   margin-left: 1em;
   text-align: center;

@@ -1,37 +1,63 @@
+/* base mobile dimensions......................... why is this here and not somewheres else i hate it i hate this */
 header {
-  position: sticky;
-  top: -320px;
-  right: 0;
   background-image: url("../images/batthern.png");
   background-attachment: fixed;
   background-color: orange;
-  height: 400px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  z-index: 100;
+  justify-content: start;
 }
 
-header .portrait {
+ header .portrait {
   display: block;
   margin: 0 auto;
-  max-height: 100%;
-  width: 40vw;
-  max-width: 256px;
-  margin-bottom: 60px;
-  
+  max-height: 100px;
+  max-width: 25vw;
+  padding: 5px;
 }
 
 header .name {
-  position: absolute;
-  bottom: 0;
-  /* bottom: -20px; */
-}
-
-header h2 {
   text-align: center;
   margin: 0.5em 0;
   color: white;
   font-weight: normal;
-} 
+}
+
+header .name h2 {
+  display: block;
+  margin: 0;
+}
+
+@media only screen and (min-width: 650px) { /* ipad-ish dimensions? */
+
+  header {
+    position: sticky;
+    top: -320px;
+    right: 0;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+
+  header .portrait {
+    max-height: 100%;
+    width: 40vw;
+    max-width: 256px;
+    padding: 30px 0;
+    
+  }
+
+  nav span {
+    opacity: 1;
+  }
+
+  /* header .name { */
+    /* display: block; */
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* bottom: -20px; */
+ }
