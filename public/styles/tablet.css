@@ -1,6 +1,6 @@
 @media only screen and (min-width: 650px) { /* ipad-ish dimensions? */
 
-  header {
+  header.headpanel {
     position: sticky;
     top: -320px;
     right: 0;
@@ -20,9 +20,11 @@
     
   }
 
-  nav span {
+  nav .logo {
     opacity: 1;
+    padding-bottom: 20px;
   }
+  
 
   /* header .name { */
     /* display: block; */

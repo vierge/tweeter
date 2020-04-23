@@ -12,12 +12,16 @@ WHAT DO WE WANT FOR DESKTOP:
   
   nav {
     background-color: slateblue;
-    height: 100px;
+    height: 80px;
+  }
+
+  nav span.logo {
+    padding: 0;
   }
 
   .desktopFlex {
     position: fixed;
-    top: 100px;
+    top: 80px;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -27,8 +31,8 @@ WHAT DO WE WANT FOR DESKTOP:
   }
 
   .headpanel {
-    min-height: calc(100% - 100px);
-    width: 400px;
+    min-height: calc(100% - 80px);
+    max-width: 400px;
     margin: 0 auto;
   }
 

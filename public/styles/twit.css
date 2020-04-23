@@ -4,7 +4,7 @@
   overflow: auto;
   height: 100%;
   margin: 1em 0;
-  border: 5px solid #444;
+  border: 5px solid #6272a4;
   /* z-index: 0; */
 }
 
@@ -66,5 +66,5 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-top: 5px solid #444;
+  border-top: 5px solid #6272a4;
 }

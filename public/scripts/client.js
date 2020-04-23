@@ -116,9 +116,9 @@ const createTweetElement = (tweetData) => {
           ${postDate}
         </p>
         <div class="options">
-          <a href="#flag">flag</a>
-          <a href="#rt">rt</a>
-          <a href="#like">like</a>
+          <a href="#flag"><span class="iconify" data-icon="bx:bxs-flag" data-inline="false"></span></a>
+          <a href="#rt"><span class="iconify" data-icon="entypo:retweet" data-inline="false"></span></a>
+          <a href="#like"><span class="iconify" data-icon="wpf:like" data-inline="false"></span></a>
         </div>
       </footer>
   `;  

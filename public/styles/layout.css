@@ -21,8 +21,8 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: #f8f8f2;
+  background-color: #282a36;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
   position: relative;
@@ -38,6 +38,14 @@ main {
   width: 90%;
   margin: 0 auto;
   background-color: inherit;
+}
+
+a {
+  color: #50fa7b;
+}
+
+a:hover {
+  color: whitesmoke;
 }
 
 /*
